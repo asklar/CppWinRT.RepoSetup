@@ -7,8 +7,8 @@
     <CppWinRTGenerateWindowsMetadata>true</CppWinRTGenerateWindowsMetadata>
     <MinimalCoreWin>true</MinimalCoreWin>
     <ProjectGuid>{1fba7251-5e08-4c06-96cc-b0b7b5f7a417}</ProjectGuid>
-    <ProjectName>OpenAI</ProjectName>
-    <RootNamespace>OpenAI</RootNamespace>
+    <ProjectName>PROJECTNAME</ProjectName>
+    <RootNamespace>ROOTNAMESPACE</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
@@ -120,7 +120,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
-      <ModuleDefinitionFile>OpenAI_WinRT.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>REPO_TEMPLATE.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
@@ -146,47 +146,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Choice.h">
-      <DependentUpon>Choice.idl</DependentUpon>
-      <SubType>Code</SubType>
-    </ClInclude>
-    <ClInclude Include="CompletionRequest.h">
-      <DependentUpon>CompletionRequest.idl</DependentUpon>
-      <SubType>Code</SubType>
-    </ClInclude>
     <ClInclude Include="pch.h" />
-    <ClInclude Include="OpenAIClient.h">
-      <DependentUpon>OpenAIClient.idl</DependentUpon>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Choice.cpp">
-      <DependentUpon>Choice.idl</DependentUpon>
-      <SubType>Code</SubType>
-    </ClCompile>
-    <ClCompile Include="CompletionRequest.cpp">
-      <DependentUpon>CompletionRequest.idl</DependentUpon>
-      <SubType>Code</SubType>
-    </ClCompile>
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="OpenAIClient.cpp">
-      <DependentUpon>OpenAIClient.idl</DependentUpon>
     </ClCompile>
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="Choice.idl">
-      <SubType>Designer</SubType>
-    </Midl>
-    <Midl Include="CompletionRequest.idl">
-      <SubType>Designer</SubType>
-    </Midl>
-    <Midl Include="OpenAIClient.idl" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="OpenAI_WinRT.def" />
+    <None Include="REPO_TEMPLATE.def" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
